@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1</title>
+</head>
+<body>
+    <script>
+    function somatorioDivisiveis3ou5EExibirNumeros() {
+    const numero = parseInt(prompt("Digite um número inteiro positivo:"));
+
+    if (isNaN(numero) || numero <= 0) {
+        alert("Por favor, digite um número inteiro positivo válido.");
+        return;
+    }
+
+    let somatoria = 0;
+    let numerosDivisiveis = Array();
+    
+    for (let i = 1; i < numero; i++) {
+        if (i % 3 === 0 || i % 5 === 0) {
+        somatoria += i;
+        numerosDivisiveis.push(i);
+        }
+    }
+
+    alert(`Números divisíveis por 3 ou 5 até ${numero - 1} é ${numerosDivisiveis.join(", ")} e a somatória dos números divisíveis por 3 ou 5 até ${numero - 1} é ${somatoria}`);
+
+}
+
+    somatorioDivisiveis3ou5EExibirNumeros();
+    </script>
+</body>
+</html>
